@@ -27,7 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
-        color: isMe ? Colors.white : Theme.of(context).accentColor,
+        color: isMe ? Colors.white : Colors.white,
         borderRadius: isMe
             ? BorderRadius.only(
                 topLeft: Radius.circular(15.0),
@@ -45,7 +45,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Text(
             message.text,
             style: TextStyle(
-              color: Colors.blueGrey,
+              color: isMe ? Colors.blueGrey : Colors.blueGrey,
               fontSize: 16.0,
               fontWeight: FontWeight.w600,
             ),

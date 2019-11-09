@@ -27,37 +27,37 @@ final User currentUser = User(
 // USERS
 final User greg = User(
   id: 1,
-  name: 'Greg',
+  name: 'Ashutosh',
   imageUrl: 'assets/images/greg.jpg',
 );
 final User james = User(
   id: 2,
-  name: 'James',
+  name: 'Tannu',
   imageUrl: 'assets/images/james.jpg',
 );
 final User john = User(
   id: 3,
-  name: 'John',
+  name: 'Rahul',
   imageUrl: 'assets/images/john.jpg',
 );
 final User olivia = User(
   id: 4,
-  name: 'Olivia',
+  name: 'Aman',
   imageUrl: 'assets/images/olivia.jpg',
 );
 final User sam = User(
   id: 5,
-  name: 'Sam',
+  name: 'Gaurav',
   imageUrl: 'assets/images/sam.jpg',
 );
 final User sophia = User(
   id: 6,
-  name: 'Sophia',
+  name: 'Ritik',
   imageUrl: 'assets/images/sophia.jpg',
 );
 final User steven = User(
   id: 7,
-  name: 'Steven',
+  name: 'Ketan',
   imageUrl: 'assets/images/steven.jpg',
 );
 
