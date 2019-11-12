@@ -1,4 +1,4 @@
-<img src="assets/images/logo.png" width="500"/> 
+<img src="assets/images/logo.png" aligh="center" width="500"/> 
 
 # Egnite
 Egnite is a chat application which allows you to interact with your friends and also allows you to play games and do things together.
@@ -19,7 +19,7 @@ $ cd egnite-app
 $ flutter packages get
 ```
 
-4. **Run on emulator or real device**
+4. **Run on emulator/device**
 ```
 $ flutter run
 ```
