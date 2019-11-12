@@ -1,4 +1,4 @@
-<img src="assets/images/logo.png" aligh="center" width="500"/> 
+<div style="text-align:center"><img src="assets/images/logo.png" aligh="center" width="500"/> </div>
 
 # Egnite
 Egnite is a chat application which allows you to interact with your friends and also allows you to play games and do things together.
