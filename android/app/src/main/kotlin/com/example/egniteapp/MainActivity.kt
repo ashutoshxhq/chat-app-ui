@@ -1,4 +1,4 @@
-package com.example.magix_chat
+package com.example.egniteapp
 
 import android.os.Bundle
 import io.flutter.app.FlutterActivity
