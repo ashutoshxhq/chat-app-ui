@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vibration/vibration.dart';
 import '../widgets/recent_chats.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,14 +10,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   PageController _pageController;
   ScrollController _categoryController;
-  int selectedIndex = 0;
-  final List<String> categories = ['Chats', 'Status', 'Groups', 'Requests'];
+  int selectedIndex = 1;
+  final List<String> categories = ['Feed', 'Chats', 'Status', 'Requests'];
 
   @override
   void initState() {
     super.initState();
     _categoryController = ScrollController();
-    _pageController = PageController();
+    _pageController = PageController(initialPage: 1);
   }
 
   @override
@@ -134,8 +135,9 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         iconTheme: IconThemeData(size: 30, color: Colors.white),
+        centerTitle: false,
         title: Text(
-          'Magix',
+          'Egnite',
           style: TextStyle(
             fontSize: 28.0,
             fontFamily: 'poppins-regular',
@@ -165,7 +167,6 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {
-                    
                     if (_pageController.hasClients) {
                       _pageController.animateToPage(
                         index,
@@ -174,18 +175,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     }
 
-                    if(index == 2 && selectedIndex == 1){
-                      _categoryController.animateTo(_categoryController.offset + 80,
-                    curve: Curves.linear,
-                    duration: Duration(milliseconds: 200));
+                    if (index == 2 && selectedIndex == 1) {
+                      _categoryController.animateTo(
+                          _categoryController.offset + 60,
+                          curve: Curves.linear,
+                          duration: Duration(milliseconds: 100));
                     }
 
-                   if(index == 1 && selectedIndex == 2){
-                      _categoryController.animateTo(_categoryController.offset - 80,
-                    curve: Curves.linear,
-                    duration: Duration(milliseconds: 200));
+                    if (index == 1 && selectedIndex == 2) {
+                      _categoryController.animateTo(
+                          _categoryController.offset - 60,
+                          curve: Curves.linear,
+                          duration: Duration(milliseconds: 100));
                     }
-                   
+
                     setState(() {
                       selectedIndex = index;
                     });
@@ -214,18 +217,21 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Expanded(
             child: PageView(
+              
               onPageChanged: (index) {
-                if(index == 2 && selectedIndex == 1){
-                      _categoryController.animateTo(_categoryController.offset + 80,
-                    curve: Curves.linear,
-                    duration: Duration(milliseconds: 200));
-                    }
+                Vibration.vibrate(duration: 100, amplitude: 128);
 
-                   if(index == 1 && selectedIndex == 2){
-                      _categoryController.animateTo(_categoryController.offset - 80,
-                    curve: Curves.linear,
-                    duration: Duration(milliseconds: 200));
-                    }
+                if (index == 2 && selectedIndex == 1) {
+                  _categoryController.animateTo(_categoryController.offset + 60,
+                      curve: Curves.linear,
+                      duration: Duration(milliseconds: 100));
+                }
+
+                if (index == 1 && selectedIndex == 2) {
+                  _categoryController.animateTo(_categoryController.offset - 60,
+                      curve: Curves.linear,
+                      duration: Duration(milliseconds: 100));
+                }
                 setState(() {
                   selectedIndex = index;
                 });
@@ -243,7 +249,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      RecentChats(),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30.0),
+                              topRight: Radius.circular(30.0),
+                            ),
+                          ),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30.0),
+                                topRight: Radius.circular(30.0),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "News Feed",
+                                  style: TextStyle(
+                                    fontSize: 17.0,
+                                    fontFamily: 'poppins-regular',
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.2,
+                                  ),
+                                ),
+                              )),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -271,7 +303,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      RecentChats(),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30.0),
+                              topRight: Radius.circular(30.0),
+                            ),
+                          ),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30.0),
+                                topRight: Radius.circular(30.0),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Status",
+                                  style: TextStyle(
+                                    fontSize: 17.0,
+                                    fontFamily: 'poppins-regular',
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.2,
+                                  ),
+                                ),
+                              )),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -285,7 +343,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      RecentChats(),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30.0),
+                              topRight: Radius.circular(30.0),
+                            ),
+                          ),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30.0),
+                                topRight: Radius.circular(30.0),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Requests",
+                                  style: TextStyle(
+                                    fontSize: 17.0,
+                                    fontFamily: 'poppins-regular',
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.2,
+                                  ),
+                                ),
+                              )),
+                        ),
+                      ),
                     ],
                   ),
                 ),

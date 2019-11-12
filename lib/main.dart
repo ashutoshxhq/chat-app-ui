@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarBrightness: Brightness.light));
     return MaterialApp(
-      title: 'Chats',
+      title: 'Egnite',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.red,
