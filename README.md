@@ -1,16 +1,29 @@
-# egniteapp
+# Egnite
+Egnite is a chat application which allows you to interact with your friends and also allows you to play games and do things together.
 
-A new Flutter project.
+<img src="assets/images/logo.png" width="1000"/> 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## How to run Egnite?
+1. **Clone the Repo**
+```
+$ git clone https://github.com/idkashutosh/egnite-app.git
+```
 
-A few resources to get you started if this is your first Flutter project:
+2. **Change to Directory**
+```
+$ cd egnite-app
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+3. **Get Packages**
+```
+$ flutter packages get
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. **Run on emulator or real device**
+```
+$ flutter run
+```
+
+## Developer(s)
+**Ashutosh Dubey**
