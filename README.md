@@ -1,8 +1,7 @@
+<img src="assets/images/logo.png" width="500"/> 
+
 # Egnite
 Egnite is a chat application which allows you to interact with your friends and also allows you to play games and do things together.
-
-<img src="assets/images/logo.png" width="1000"/> 
-
 
 ## How to run Egnite?
 1. **Clone the Repo**
