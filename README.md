@@ -3,7 +3,7 @@
 
 
 # Egnite
-Egnite is a chat application which allows you to interact with your friends and also allows you to play games and do things together.
+Egnite is a location based anonymous posing and chat application which allows you to interact with your friends, play games and do things together.
 
 ## How to run Egnite?
 1. **Clone the Repo**
