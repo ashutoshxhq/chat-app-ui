@@ -1,19 +1,15 @@
-<div style="text-align:center;width:1000px;"><img src="assets/images/logo.png" align="center" width="500"/> </div>
+# Chat App
+This is a location based anonymous posing and chat application which allows you to interact with your friends, play games and do things together.
 
-
-
-# Egnite
-Egnite is a location based anonymous posing and chat application which allows you to interact with your friends, play games and do things together.
-
-## How to run Egnite?
+## How to run Chat App?
 1. **Clone the Repo**
 ```
-$ git clone https://github.com/idkashutosh/egnite-app.git
+$ git clone https://github.com/idkashutosh/chat-app.git
 ```
 
 2. **Change to Directory**
 ```
-$ cd egnite-app
+$ cd chat-app
 ```
 
 3. **Get Packages**
