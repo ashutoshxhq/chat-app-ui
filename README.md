@@ -4,12 +4,12 @@ This is a location based anonymous posing and chat application which allows you 
 ## How to run Chat App?
 1. **Clone the Repo**
 ```
-$ git clone https://github.com/idkashutosh/chat-app.git
+$ git clone https://github.com/idkashutosh/chat-app-ui.git
 ```
 
 2. **Change to Directory**
 ```
-$ cd chat-app
+$ cd chat-app-ui
 ```
 
 3. **Get Packages**
